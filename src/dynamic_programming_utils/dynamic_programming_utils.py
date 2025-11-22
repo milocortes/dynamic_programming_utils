@@ -33,4 +33,7 @@ def  _rouwenhorst(p : float,
                   n : int)
 
     if n == 2:
-        return [m-Δ, m+Δ],  [p 1-p; 1-q q]
+        return np.array([m-Δ, m+Δ]),  np.array([[p 1-p], [1-q q]])
+    else :
+        _, θ_nm1 = _rouwenhorst(p, q, m, Δ, n-1)
+        
